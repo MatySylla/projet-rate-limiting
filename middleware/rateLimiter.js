@@ -47,7 +47,7 @@ export const rateLimiter = async (req, res, next) => {
     // 📍 AUTRES ENDPOINTS : Protection générale
     else {
       rules = [
-        { limit: 100, window: 60, block: 3600 } // 100 req/1min → blocage 1h
+        { limit: 5, window: 3*60, block: 3600 } // 100 req/1min → blocage 1h
       ];
     }
 
